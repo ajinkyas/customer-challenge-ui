@@ -1,7 +1,7 @@
 # customer-challenge-ui
 
 This README outlines the details of collaborating on this Ember application.
-This app fetches the customer data from the server and allows the user to view and edit the customer record. You can add or remove the customer properties.
+This app fetches the customer data from server and allows the user to view and manage the customer records. You can add new or edit or remove existing properties of a customer through UI and save it back to server.
 
 ## Prerequisites
 

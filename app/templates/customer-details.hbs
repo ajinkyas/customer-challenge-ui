@@ -1,0 +1,26 @@
+{{page-title "Customer Details"}}
+<h2>{{@model.attributes.email}}</h2>
+<span>Last updated: {{@model.last_updated}}</span>
+<h3>Attributes</h3>
+<LinkTo @route='edit-customer' @model={{@model.id}}>
+  Edit Attributes
+</LinkTo>
+<div class="attribute-pair">
+    <div class="attribute-key float-start w-50">id</div>
+    <div class="attribute-value float-start">{{@model.id}}</div>
+</div>
+{{#each @model.attributePairs as |attribute|}}
+<div class="attribute-pair clearfix">
+    <div class="attribute-key float-start w-50">{{attribute.key}}</div>
+    <div class="attribute-value float-start">{{attribute.value}}</div>
+</div>
+{{/each}}
+<div class="clearfix"></div>
+<h3>Events</h3>
+{{#each @model.eventPairs as |event|}}
+<div class="attribute-pair">
+    <div class="attribute-key float-start w-50">{{event.key}}</div>
+    <div class="attribute-value float-start">{{event.value}}</div>
+</div>
+{{/each}}
+{{outlet}}

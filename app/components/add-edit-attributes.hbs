@@ -1,0 +1,22 @@
+{{#each this.attributes as |attribute|}}
+  <div class="mb-3 row">
+    <label for="{{attribute.key}}" class="col-sm-2 col-form-label" data-test-attr-label>{{attribute.key}}</label>
+    <div class="col-sm-4">
+        <Input @type="text" @value={{attribute.value}} id="{{attribute.key}}" class="form-control" data-test-attr-value/>
+    </div>
+  </div>
+{{/each}}
+<div class="row">
+    <div class="col-sm-3">
+        <Input @value={{this.newKey}} @type="text" title="New attribute name" class="form-control" id="new-key" placeholder="new attr name" data-test-new-key/>
+    </div>
+    <div class="col-sm-3">
+        <Input @value={{this.newValue}} @type="text" title="New attribute value" class="form-control" id="new-value" placeholder="new attr value" data-test-new-value/>
+    </div>
+    <div class="col-sm-2">
+        <button type="button" class="btn btn-link"  {{on 'click' (fn this.addNewAttribute this.newKey this.newValue)}} data-test-add-btn>Add</button>
+    </div>
+</div>
+
+<button type="button" class="btn btn-primary mt-4" {{on 'click' this.storeAttributes}}>Save</button>
+{{yield}}

@@ -1,7 +1,7 @@
 # customer-challenge-ui
 
 This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This app fetches the customer data from the server and allows the user to view and edit the customer record. You can add or remove the customer properties.
 
 ## Prerequisites
 
@@ -43,9 +43,23 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
+## Known issues
 
-Specify what it takes to deploy your app.
+* 'Remove attribute' not implemented
+* 'Discard changes' not implemented
+* Pagination UI is not implemented
+* Email should be immutable
+* Navigation not opening on mobile (need more testing on mobile)
+* `timestamp` conversion is pending
+* Navigation bar is redundant
+* Highlight current nav link is pending
+
+### Future work
+
+* Explore EmberData and use if applicable
+* Use PATCH instead of PUT for customer update
+* Add more tests
+* Improve UX
 
 ## Further Reading / Useful Links
 
